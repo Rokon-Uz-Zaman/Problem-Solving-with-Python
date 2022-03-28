@@ -1,15 +1,20 @@
-"""Remove duplicate elements from sorted array 
-with returning how many duplicates
+"""Remove duplicate elements from array 
 
 Example1 :
-input: [1,2,2,3] output: [1,2,3] Number of duplicates is 1
+input: [1,2,2,3] output: [1,2,3]
 
 Example2 :
-input: [1,2,3,3,4,4,5] output: [1,2,3,4,5]  Number of duplicates is 2 """
+input: [1,2,3,4,4,5] output: [1,2,3,4,5]   """
 
 
-ar=[1,2,3,3,4,4,5]
+# using loop 
 
-print(set(ar))
+ar=[1,2,3,4,4,5]
 
-print(f"Number of duplicates is {len(ar)-len(set(ar))}")
+
+for element in ar:
+  if ar.count(element) >1:
+     ar.remove(element)
+     
+print(ar)
+
